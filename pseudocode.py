@@ -6,6 +6,8 @@ def on_new_email(email_file_path):
     # TODO make sure that the file name is not public, or make it random.
     # TODO maybe it's possible to retrieve the recipient's public key from the email itself? Or at least
     # its fingerprint or something so we can download the key from key databases to verify it?
+    # https://crypto.stackexchange.com/questions/81913/is-it-possible-to-get-the-pgp-public-key-from-pgp-message
+    # or the email address itself can contain a public key (I don't think it is in any standards though).
     os.popen(f'gpg -r {get_recipiend_email_address} {email_file_path}')
     cid = os.popen(f'ipfs add -Q {email_file_path}.gpg')
     # TODO somehow make the user able to receive CID do download the email.
