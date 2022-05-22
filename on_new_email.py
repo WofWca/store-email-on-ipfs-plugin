@@ -1,5 +1,7 @@
 __license__ = """
 Copyright 2022 WofWca <wofwca@protonmail.com>
+Copyright 2022 Valery Senotov <senotovel@gmail.com>
+Copyright 2022 Sergei Filipppov <sphilippov@protonmail.com>
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
