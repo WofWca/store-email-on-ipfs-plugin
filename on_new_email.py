@@ -28,7 +28,7 @@ def on_new_email(original_message_file_name: str, recipiend_email_address: str):
     # its fingerprint or something so we can download the key from key databases to verify it?
     # https://crypto.stackexchange.com/questions/81913/is-it-possible-to-get-the-pgp-public-key-from-pgp-message
     # or the email address itself can contain a public key (I don't think it is in any standards though).
-    os.popen(f'gpg -r {recipiend_email_address} {original_message_file_name}')
+    os.popen(f'gpg -r {recipiend_email_address} --encrypt {original_message_file_name}')
     encrypted_email_file_name = f'{original_message_file_name}.gpg'
     fs = os.popen(f'ipfs add -Q {encrypted_email_file_name}')
     cid = fs.read()
