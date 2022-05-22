@@ -21,6 +21,7 @@ def on_new_email(original_message_file_name: str, recipiend_email_address: str):
     # original_message_file_name = 'original_message.txt'
     # with open(original_message_file_name, 'w') as original_message_file:
     #     original_message_file.write(original_message)
+    print(f'New email. Path: {original_message_file_name}, recipient: {recipiend_email_address}')
 
     # TODO protect from code injections.
     # TODO make sure that the file name is not public, or make it random.
@@ -34,4 +35,4 @@ def on_new_email(original_message_file_name: str, recipiend_email_address: str):
     cid = fs.read()
     # TODO somehow make the user able to receive CID do download the email.
     # Also other peers should be able co-host the emails.
-    print(f'Encryped email stored on IPFS. CID: {cid}')
+    print(f'Encryped email stored on IPFS. CID:\n{cid}')
