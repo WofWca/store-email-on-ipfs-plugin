@@ -17,7 +17,7 @@ if __name__ == "__main__":
 
     handler = EventHandler()
     notifier = pyinotify.Notifier(wm, handler)
-    directory_to_watch = './tests'
+    directory_to_watch = './original_emails'
     wdd = wm.add_watch(directory_to_watch, mask, rec=True)
     print(f'Watching directory {directory_to_watch} for new email files')
 
