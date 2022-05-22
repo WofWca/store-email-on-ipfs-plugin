@@ -1,1 +1,2 @@
 eml_parser
+pyinotify
