@@ -17,7 +17,9 @@ limitations under the License.
 import os
 
 # def on_new_email(original_message: str, recipiend_email_address: str):
-def on_new_email(original_message_file_name: str, recipiend_email_address: str):
+def on_new_email(original_message_file_name: str, recipiend_email_addresses: list[str]):
+    # Work with just one recipient for now. TODO
+    recipiend_email_address = recipiend_email_addresses[0]
     # original_message_file_name = 'original_message.txt'
     # with open(original_message_file_name, 'w') as original_message_file:
     #     original_message_file.write(original_message)

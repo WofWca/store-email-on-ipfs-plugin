@@ -17,7 +17,7 @@ limitations under the License.
 import json, datetime
 import eml_parser
 
-def get_recipiend_email_address(email_file_path: str = "./tests/sample.eml") -> list:
+def get_recipiend_email_addresses(email_file_path: str = "./tests/sample.eml") -> list:
 
     ep = eml_parser.EmlParser()
     parsed_eml = ep.decode_email(email_file_path)
@@ -34,5 +34,5 @@ def get_contents(email_file_path: str = "./tests/sample.eml") -> dict:
     return contents
 
 # if __name__ == '__main__':
-#     print(get_recipiend_email_address())
+#     print(get_recipiend_email_addresses())
 #     print(get_contents())

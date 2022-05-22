@@ -1,13 +1,13 @@
 import pyinotify
 from on_new_email import on_new_email
-from eml_parse import get_recipiend_email_address
+from eml_parse import get_recipiend_email_addresses
 
 mask = pyinotify.IN_CREATE  # watched events
 
 class EventHandler(pyinotify.ProcessEvent):
     def process_IN_CREATE(self, event):
-        recipiend_email_address = get_recipiend_email_address(event.pathname)
-        on_new_email(event.pathname, recipiend_email_address)
+        recipiend_email_addresses = get_recipiend_email_addresses(event.pathname)
+        on_new_email(event.pathname, recipiend_email_addresses)
 
     # def process_IN_DELETE(self, event):
     #     print "Removing:", event.pathname
